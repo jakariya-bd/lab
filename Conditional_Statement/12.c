@@ -20,7 +20,7 @@ int main()
 
     total_mark = physics_mark + chemistry_mark + computer_mark;
     percentage = (total_mark / 300.0) * 100.0;
-    round_percentage = (int) percentage;
+    round_percentage = round(percentage);
 
     printf("Roll No : %d\n", roll);
     printf("Name of Student : %s\n", name);
