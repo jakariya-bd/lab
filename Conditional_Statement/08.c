@@ -16,7 +16,10 @@ int main(void)
         else if( y < 0 ) printf("Third quadrant.\n");
     }
 
-    if( x == 0 || y == 0 ){
+    if( x == 0 && y == 0){
+        printf("main point of graph.\n");
+    }
+    else if( x == 0 || y == 0 ){
         printf("middle of two quadrants.\n");
     }
 
