@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="author" content="MD. Jakariya Molla">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+      body {
+        font-family: 'Calibri';
+      }
+      h1 {
+        text-align: center;
+      }
+      form {
+        padding: 5px;
+      }
+      input, label {
+        padding: 5px;
+        margin: 5px;
+      }
+      .rd, .cb {
+        margin-left: 15px;
+      }
+      #click-me, #reset {
+        width: 100px;
+        height: 35px;
+      }
+      #submit {
+        height: 48px;
+        width: 48px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Student's survey form</h1>
+
+    <form action="./action_page.php" method="post">
+
+      <fieldset>
+        <legend>Personal Info</legend>
+        
+        <label for="name">Full Name: </label>
+        <input type="text" id="name" name="name" placeholder="Jakariya Molla"><br>
+        
+        <label for="dob">Date of Birth: </label>
+        <input type="date" id="dob" name="dob"><br>
+        
+        <label for="gender">Gender: </label>
+        <input class="rd" type="radio" name="gender" id="rd_male" value="Male">
+        <label for="rd_male">Male</label>
+        <input class="rd" type="radio" name="gender" id="rd_female" value="Femal">
+        <label for="rd_female">Female</label>
+        <input class="rd" type="radio" name="gender" id="rd_other" value="Other">
+        <label for="rd_other">Other</label><br>
+
+        <label for="university">University: </label>
+        <input type="text" id="university" name="university" value="North Western Univeristy" readonly><br>
+        <input type="hidden" id="country" name="country" value="Bangladesh">
+
+        <label for="user-photo">Your photo:</label>
+        <input type="file" id="user-photo" name="user-photo"><br>
+      </fieldset>
+      <br>
+
+      <fieldset>
+        <legend>Survey</legend>
+        
+        <label for="favcolor">Favorite Color: </label>
+        <input type="color" id="favcolor" name="favcolor" value="#444fff"><br>
+
+        <label>Device(s) you use: </label>
+        <input class="cb" type="checkbox" id="cb_smartphone" name="cb_smartphone" value="Smartphone">
+        <label for="cb_smartphone">Smartphone</label>
+        <input class="cb" type="checkbox" id="cb_laptop" name="cb_laptop" value="Laptop">
+        <label for="cb_laptop">Laptop</label>
+        <input class="cb" type="checkbox" id="cb_tablet" name="cb_tablet" value="Tablet">
+        <label for="cb_tablet">Tablet</label><br><br>
+
+        <label for="subject">Choose your favorite subject: </label>
+        <select id="subject" name="subject">
+          <option value="Robotics">Robotics</option>
+          <option value="Mathematics" selected>Mathematics</option>
+          <option value="Physics">Physics</option>
+          <option value="English">English</option>
+          <option value="History">History</option>
+          <option value="Biology">Biology</option>
+          <option value="ICT">ICT</option>
+        </select><br>
+
+        
+        <label for="month">Select your favorite month: </label>
+        <input type="month" id="month" name="month"><br>
+        <label for="week">Select current week: </label>
+        <input type="week" id="week" name="week"><br>
+        <label for="time">Current time(when you are here):</label>
+        <input type="time" id="time" name="time"><br>
+
+        <label for="random-dt">Choose a random date and time: </label>
+        <input type="datetime-local" id="random-dt" name="random-dt"> <br>
+
+        <label for="favnum">Favorite integer: </label>
+        <input type="number" id="favnum" name="favnum"><br>
+
+        <label for="website">Favorite website URL: </label>
+        <input type="url" id="website" name="website" placeholder="https://www.wikipedia.org/"><br>
+
+        <label for="search">Google Search: </label>
+        <input type="search" id="search" name="search" placeholder="Cats"><br>
+
+        <label for="rating">Rate this survey: </label>
+        0
+        <input type="range" id="rating" name="rating" min="0" max="5">
+        5
+        <br>
+
+        <br><button id="click-me" type="button" onclick="alert('Thank you for participating the survey. Do not forget to submit!')">Click me!</button>
+        
+      </fieldset><br>
+
+      <fieldset>
+        <legend>Student Account</legend>
+        <label for="phone">Phone: </label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{5}-[0-9]{6}" placeholder="01305-009529">
+        <small>Format: 01305-009529</small><br>
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" name="email" placeholder="jakariya.khulna@gmail.com"><br>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" placeholder="jakariya96"><br>
+        <label for="pwd">Password: </label>
+        <input type="password" id="pwd" name="pwd">
+      </fieldset><br>
+      
+      <input id="reset" type="reset" value="Reset the form"><br>
+      <br><input id="submit" type="image"src="https://www.w3schools.com/html/img_submit.gif" title="Submit" alt="Submit">
+
+    </form>
+
+  </body>
+</html>
